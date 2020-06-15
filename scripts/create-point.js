@@ -1,4 +1,3 @@
-//Seletor de Estados e Cidades
 function populateUFs() {
     const ufSelect = document.querySelector("select[name=uf]")
 
@@ -45,8 +44,7 @@ document
    .querySelector("select[name=uf]")
    .addEventListener("change", getCities)
 
-//Itens de coleta
-// pegar todos os Li's
+
 const itemsToCollect = document.querySelectorAll(".itens-grid li")
 
 for (const item of itemsToCollect) {
@@ -60,35 +58,34 @@ let selectedItems = []
 function handleSelectedItem(event) {
     const itemLi = event.target
 
-    //adicionar ou remover uma classe com javascript
+    
     itemLi.classList.toggle("selected")
 
     const itemId = itemLi.dataset.id
 
-    //Verificar se existem intens selecionados
-    //Se sim, pegar os itens selecionados
+    
 
     const alreadySelected = selectedItems.findIndex( item => {
-        const itemFound = item == itemId //isso será true ou false
+        const itemFound = item == itemId 
         return itemFound
     } )
 
-    //Se já estiver selecionado ...
+    
     if (alreadySelected >= 0) {
-        //... tirar da seleção
+        
         const filteredItems = selectedItems.filter( item => {
-            const itemIsDifferent = item != itemId //false
+            const itemIsDifferent = item != itemId 
             return itemIsDifferent
         })
 
         selectedItems = filteredItems
-    //Se não estiver selecionado ...
+    
     } else {
-        // .. adicionar a seleção
+        
         selectedItems.push(itemId)
     }
 
-    //Atualizar o campo escondido com os itens selecionados
+    
     collectedItem.value = selectedItems
 
     
