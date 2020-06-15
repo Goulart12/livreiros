@@ -7,8 +7,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap">
 
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="/create-point.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/create-point.css">
     
     
 </head>
@@ -18,8 +18,8 @@
         
 
         <header>
-            <img src="assets/logo.svg" alt="logomarca" height="50px">
-            <a href="#">
+            <img src="../assets/logo.svg" alt="logomarca" height="50px">
+            <a href="index.html">
                 <span></span>
                 Cadastre um ponto de venda/doação
             </a>
@@ -39,12 +39,12 @@
         <div class="field-group">
             <div class="field">
                 <label for="name">Nome da entidade</label>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
             </div>
 
             <div class="field">
                 <label for="point">Tipo de ponto</label>
-                <select name="pt">
+                <select name="pt" required>
                     <option value="">Selecione um tipo de ponto</option>
                 </select>
             </div>
@@ -54,12 +54,12 @@
             
              <div class="field">
                 <label for="address">Endereço</label>
-                <input type="text" name="address">
+                <input type="text" name="address" required>
             </div>
 
              <div class="field">
                 <label for="address2">Número/Complemento</label>
-                <input type="text" name="address2">
+                <input type="text" name="address2" required>
             </div>
         </div>
 
@@ -67,14 +67,15 @@
         
         <div class="field">
             <label for="state">Estado</label>
-            <select name="uf">
+            <select name="uf" required>
                 <option value="">Selecione o Estado</option>
             </select>
+            <input type="hidden" name="state">
         </div>
 
         <div class="field">
             <label for="city">Cidade</label>
-            <select name="city">
+            <select name="city" disabled>
                 <option value="">Selecione a Cidade</option>
             </select>
         </div>
@@ -102,18 +103,57 @@
 
         <div class="field">
             <label for="image">Imagem da entidade</label>
-            <input type="url" name="image">
+            <input type="url" name="image" required>
         </div>
     </div>
             
     </fieldset>
 
+    <fieldset>
+    
+        <legend>
+            <h2>Ítens disponíveis</h2>
+        </legend>
+
+        <div class="itens-grid">
+
+            <li data-id="1">
+                <img src="../assets/book.svg" alt="Livros">
+                <span>Livros</span>
+            </li>
+
+            <li data-id="2">
+                <img src="../assets/study.svg" alt="Livros Didáticos">
+                <span>Livros Didáticos</span>
+            </li>
+
+            <li data-id="3">
+                <img src="../assets/magazine.svg" alt="Revistas">
+                <span>Revistas</span>
+            </li>
+
+            <li data-id="4">
+                <img src="../assets/superhero.svg" alt="Quadrinhos">
+                <span>Quadrinhos</span>
+            </li>
+
+            <li data-id="5">
+                <img src="../assets/library.svg" alt="Todos os tipos">
+                <span>Todos os tipos</span>
+            </li>
+        </div>
+        
+        <input type="hidden" name="items">
+    
+    </fieldset>
+
     <button type="submit">Cadastrar ponto de coleta</button>
 
 </form>
-            
-
         
-    </div>
+</div>
+
+<script src="../scripts/create-point.js"></script>
+
 </body>
 </html>
