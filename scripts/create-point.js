@@ -1,3 +1,4 @@
+//Api do IBGE
 function populateUFs() {
     const ufSelect = document.querySelector("select[name=uf]")
 
@@ -45,6 +46,7 @@ document
    .addEventListener("change", getCities)
 
 
+//Seleçao de itens
 const itemsToCollect = document.querySelectorAll(".itens-grid li")
 
 for (const item of itemsToCollect) {
@@ -85,8 +87,6 @@ function handleSelectedItem(event) {
         selectedItems.push(itemId)
     }
 
-    
     collectedItem.value = selectedItems
 
-    
 }

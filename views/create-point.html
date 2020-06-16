@@ -44,8 +44,12 @@
 
             <div class="field">
                 <label for="point">Tipo de ponto</label>
-                <select name="pt" required>
-                    <option value="">Selecione um tipo de ponto</option>
+                <select name="cboPontos" required>
+                    <option value="stp">Selecione um tipo de ponto</option>
+                    <option value="liv">Livraria</option>
+                    <option value="bib">Biblioteca solidária</option>
+                    <option value="doa">Doação</option>
+                    <option value="seb">Sebos</option>
                 </select>
             </div>
         </div>
@@ -147,13 +151,14 @@
     
     </fieldset>
 
-    <button type="submit">Cadastrar ponto de coleta</button>
+    <button type="submit" id="btnCarregar">Cadastrar ponto de coleta</button>
 
 </form>
         
 </div>
 
 <script src="../scripts/create-point.js"></script>
+<script src="../scripts/points.js"></script>
 
 </body>
 </html>
