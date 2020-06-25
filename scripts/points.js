@@ -31,10 +31,9 @@ document.getElementById("btnCarregar").onclick = function() {
 
 console.log(comboPontos.selectedIndex)*/
 
-function comboPontos() {
-    const ptsSelect = document.querySelector("select[name=cboPontos]")
 
-}
+
+
 
 
 

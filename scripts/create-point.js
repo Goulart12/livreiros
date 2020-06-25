@@ -1,3 +1,16 @@
+// Seleção de ponto
+function comboPontos(event) {
+    const ptsSelect = document.querySelector("select[name=cboPontos]")
+    const pointInput = document.querySelector("input[id=point]")
+
+    const indexOfSelectedPoint = event.target.selectedIndex
+    pointInput.value = event.target.options[indexOfSelectedPoint].text
+
+
+}
+
+document.addEventListener("change", comboPontos)
+
 //Api do IBGE
 function populateUFs() {
     const ufSelect = document.querySelector("select[name=uf]")
@@ -89,4 +102,4 @@ function handleSelectedItem(event) {
 
     collectedItem.value = selectedItems
 
-}
+} //
